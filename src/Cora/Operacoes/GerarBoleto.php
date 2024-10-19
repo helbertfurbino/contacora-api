@@ -2,11 +2,12 @@
 
 namespace Cora\Operacoes;
 
+use Cora\DTO\DTOBoleto;
+
 class GerarBoleto
 {
 	protected DTOBoleto $dtoBoleto;
 	protected ApiCoraBase $apiCoraBase;
-
 
 	public function gerar(ApiCoraBase $apiCoraBase, DTOBoleto $dtoBoleto)
 	{
