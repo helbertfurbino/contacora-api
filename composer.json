@@ -16,7 +16,5 @@
             "name": "Helbert Furbino",
             "email": "helbertsamuel@gmail.com"
         }
-    ],
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    ]
 }
