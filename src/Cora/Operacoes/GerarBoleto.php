@@ -1,8 +1,6 @@
 <?php
 
-namespace Cora;
-
-namespace Cora;
+namespace Cora\Operacoes;
 
 class GerarBoleto
 {

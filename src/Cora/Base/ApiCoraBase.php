@@ -1,6 +1,6 @@
 <?php
 
-namespace Cora;
+namespace Cora\Base;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Str;

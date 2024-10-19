@@ -1,6 +1,6 @@
 <?php
 
-namespace Cora;
+namespace Cora\DTO;
 
 class DTOBoleto
 {
