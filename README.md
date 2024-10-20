@@ -1,6 +1,6 @@
 # contacora-api
 
-API com funções de boleto para a conta digital PJ Cora
+API com funções de boleto para a conta digital PJ Cora. Utiliza modalidade integração direta.
 
 https://www.cora.com.br/conta-pj-digital
 
@@ -30,15 +30,15 @@ composer require helbertfurbino/contacora-api
 
 $certFile:
 
-Caminho para o arquivo de certificado (SSL) que será utilizado na comunicação segura com a API da Cora. Este arquivo é essencial para autenticação mútua entre o cliente e o servidor.
+Caminho para o arquivo de certificado (SSL) que será utilizado na comunicação segura com a API da Cora.
 
 $privateKey:
 
-Caminho para o arquivo contendo a chave privada correspondente ao certificado utilizado. A chave privada é usada para assinar a comunicação e garantir a segurança na transmissão de dados entre o cliente e a Cora.
+Caminho para o arquivo contendo a chave privada correspondente ao certificado utilizado.
 
 $clientId:
 
-Identificador único fornecido pelo banco Cora para cada cliente registrado no sistema. Este ID é utilizado durante o processo de autenticação para obter o token de acesso necessário para a interação com a API.
+Identificador único fornecido pelo banco Cora para cada cliente registrado no sistema.
 
 $keyCache (Opcional):
 
@@ -78,3 +78,7 @@ Cliente
 Criação do Boleto
 
         $cora->gerarBoleto($dtoBoleto);
+
+## Documentação
+
+https://developers.cora.com.br/docs/integracao-direta
