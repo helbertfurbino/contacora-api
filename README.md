@@ -50,7 +50,7 @@ Chave de cache personalizada para armazenar o token de autenticação gerado ap�
 
         $dtoBoleto = new DTOBoleto();
 
-Cliente
+        //Cliente
 
     	$dtoBoleto->setNomeSacado("John Doe");
     	$dtoBoleto->setEmailSacado("johndoe@example.com");
