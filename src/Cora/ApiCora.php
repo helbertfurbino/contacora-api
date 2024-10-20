@@ -9,7 +9,7 @@ use Cora\Operacoes\CancelarBoleto;
 use Cora\Operacoes\GerarBoleto;
 use Cora\Operacoes\CriarWebHook;
 use Cora\Operacoes\ExcluirWebHook;
-use Cora\Operacoes\ListarWebHook;
+use Cora\Operacoes\listarWebhook;
 
 class ApiCora extends ApiCoraBase
 {
