@@ -2,6 +2,15 @@
 
 namespace Cora;
 
+use Cora\Base\ApiCoraBase;
+use Cora\DTO\DTOBoleto;
+use Cora\Operacoes\ConsultarBoleto;
+use Cora\Operacoes\CancelarBoleto;
+use Cora\Operacoes\GerarBoleto;
+use Cora\Operacoes\CriarWebHook;
+use Cora\Operacoes\ExcluirWebHook;
+use Cora\Operacoes\ListarWebHook;
+
 class ApiCora extends ApiCoraBase
 {
 	public function gerarBoleto(DTOBoleto $dtoBoleto)
@@ -40,7 +49,7 @@ class ApiCora extends ApiCoraBase
 
 	public function excluirWebhook($id)
 	{
-		$webhook = new excluirWebhook();
+		$webhook = new ExcluirWebHook();
 
 		return $webhook->excluir($this, $id);
 	}

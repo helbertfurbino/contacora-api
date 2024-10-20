@@ -2,6 +2,8 @@
 
 namespace Cora\Operacoes;
 
+use Cora\Base\ApiCoraBase;
+
 class ExcluirWebHook
 {
     protected $apiCoraBase;
