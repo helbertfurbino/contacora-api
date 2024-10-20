@@ -44,7 +44,7 @@ $keyCache (Opcional):
 
 Chave de cache personalizada para armazenar o token de autenticação gerado após o login. Caso não seja fornecida, a chave padrão utilizada será cora_api_token. O uso do cache ajuda a evitar a necessidade de solicitar um novo token a cada requisição.
 
-     $cora = new ApiCora($certFile, $privateKey, $this->conta->client_id, $keyCache);
+     $cora = new ApiCora($certFile, $privateKey, $clientId, $keyCache);
 
 ## Exemplo Criação de Boleto
 
