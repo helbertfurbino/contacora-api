@@ -3,6 +3,7 @@
 namespace Cora\Operacoes;
 
 use Cora\DTO\DTOBoleto;
+use Cora\Base\ApiCoraBase;
 
 class GerarBoleto
 {
