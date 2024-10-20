@@ -1,6 +1,6 @@
 <?php
 
-namespace Cora;
+namespace Helbertfurbino\CoraApi;
 
 use Cora\Base\ApiCoraBase;
 use Cora\DTO\DTOBoleto;
