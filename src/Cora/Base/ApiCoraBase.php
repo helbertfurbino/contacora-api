@@ -103,7 +103,7 @@ class ApiCoraBase
 		}
 
 		return [
-			'Idempotency-Key' => $this->idempotencyKey,
+			'Idempotency-Key' => $this->idempotencyKey ?: Str::uuid(),
 			'Authorization' => 'Bearer ' . $this->token,
 			'Content-Type' => 'application/json',
 		];
