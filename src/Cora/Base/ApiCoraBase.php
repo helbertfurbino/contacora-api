@@ -13,6 +13,7 @@ class ApiCoraBase
 	protected $certFile;
 	protected $privateKey;
 	protected $cacheKey;
+	protected $idempotencyKey;
 
 	const URL_BASE_CORA = 'https://matls-clients.api.cora.com.br/';
 	const TOKEN_GRANT_TYPE = 'client_credentials';
@@ -83,8 +84,10 @@ class ApiCoraBase
 		}
 	}
 
-	public function getClient()
+	public function getClient($idempotencyKey = null)
 	{
+		$this->idempotencyKey = $idempotencyKey ?: Str::uuid();
+
 		return new Client([
 			'base_uri' => self::URL_BASE_CORA,
 			'cert' => $this->certFile,
@@ -100,7 +103,7 @@ class ApiCoraBase
 		}
 
 		return [
-			'Idempotency-Key' => (string) Str::uuid(),
+			'Idempotency-Key' => $this->idempotencyKey,
 			'Authorization' => 'Bearer ' . $this->token,
 			'Content-Type' => 'application/json',
 		];

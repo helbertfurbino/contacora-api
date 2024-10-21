@@ -10,14 +10,14 @@ class GerarBoleto
 	protected DTOBoleto $dtoBoleto;
 	protected ApiCoraBase $apiCoraBase;
 
-	public function gerar(ApiCoraBase $apiCoraBase, DTOBoleto $dtoBoleto)
+	public function gerar(ApiCoraBase $apiCoraBase, DTOBoleto $dtoBoleto, $idempotencyKey)
 	{
 		$this->dtoBoleto = $dtoBoleto;
 
 		$this->apiCoraBase = $apiCoraBase;
 
 		try {
-			$client = $this->apiCoraBase->getClient();
+			$client = $this->apiCoraBase->getClient($idempotencyKey);
 
 			$arrayJson = [
 				'headers' => $apiCoraBase->getHeaders(),

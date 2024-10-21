@@ -5,8 +5,11 @@ namespace Cora\Exemplos;
 
 use Cora\ApiCora;
 use Cora\DTO\DTOBoleto;
+use Illuminate\Support\Str;
 
 $cora = new ApiCora('certFile', 'privateKey', 'clientId');
+
+$idempotencyKey = (string) Str::uuid();
 
 
 $dtoBoleto = new DTOBoleto();
@@ -36,4 +39,4 @@ $dtoBoleto->setDataVencimento("2024-12-31");
 $dtoBoleto->setMulta(2.00); // Multa fictícia de 2%
 $dtoBoleto->setJuros(0.5);  // Juros fictícios de 0.5%
 
-$cora->gerarBoleto($dtoBoleto);
+$cora->gerarBoleto($dtoBoleto, $idempotencyKey);

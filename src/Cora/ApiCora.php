@@ -13,11 +13,11 @@ use Cora\Operacoes\listarWebhook;
 
 class ApiCora extends ApiCoraBase
 {
-	public function gerarBoleto(DTOBoleto $dtoBoleto)
+	public function gerarBoleto(DTOBoleto $dtoBoleto, string $idempotencyKey)
 	{
 		$boleto = new GerarBoleto();
 
-		return $boleto->gerar($this, $dtoBoleto);
+		return $boleto->gerar($this, $dtoBoleto, $idempotencyKey);
 	}
 
 	public function consultarBoleto($invoiceId)
