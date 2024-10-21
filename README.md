@@ -48,6 +48,8 @@ Chave de cache personalizada para armazenar o token de autenticação gerado ap�
 
 ## Exemplo Criação de Boleto
 
+    	$idempotencyKey = (string) Str::uuid();
+
         $dtoBoleto = new DTOBoleto();
 
         //Cliente
@@ -77,7 +79,7 @@ Chave de cache personalizada para armazenar o token de autenticação gerado ap�
 
 Criação do Boleto
 
-        $cora->gerarBoleto($dtoBoleto);
+        $cora->gerarBoleto($dtoBoleto, $idempotencyKey);
 
 ## Documentação
 
