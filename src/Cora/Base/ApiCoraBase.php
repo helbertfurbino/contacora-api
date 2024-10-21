@@ -86,7 +86,7 @@ class ApiCoraBase
 
 	public function getClient($idempotencyKey = null)
 	{
-		$this->idempotencyKey = $idempotencyKey ?: Str::uuid();
+		$this->idempotencyKey = $idempotencyKey ?: (string) Str::uuid();
 
 		return new Client([
 			'base_uri' => self::URL_BASE_CORA,
@@ -103,7 +103,7 @@ class ApiCoraBase
 		}
 
 		return [
-			'Idempotency-Key' => $this->idempotencyKey ?: Str::uuid(),
+			'Idempotency-Key' => $this->idempotencyKey,
 			'Authorization' => 'Bearer ' . $this->token,
 			'Content-Type' => 'application/json',
 		];
