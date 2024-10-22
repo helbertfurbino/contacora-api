@@ -50,7 +50,7 @@ Chave de cache personalizada para armazenar o token de autenticação gerado ap�
 
     	$idempotencyKey = (string) Str::uuid();
 
-        $dtoBoleto = new DTOBoleto();
+     $dtoBoleto = new DTOBoleto();
 
         //Cliente
 
